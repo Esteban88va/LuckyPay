@@ -1,9 +1,7 @@
-package com.example.luckypay.models;
+package com.example.luckypay.models.usuarios;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -13,7 +11,6 @@ import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import com.example.luckypay.enums.Rol;
 import lombok.Setter;
 import lombok.experimental.SuperBuilder;
 
@@ -45,7 +42,5 @@ public class Usuario {
     @Column (name = "telefono")
     private String tel;
     
-    @Enumerated(EnumType.STRING)
-@Column(name = "rol", nullable = false, length = 20)
-private Rol rol;
+
 }
