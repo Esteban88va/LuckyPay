@@ -4,7 +4,7 @@ import org.springframework.stereotype.Service;
 
 import com.example.luckypay.dtos.UsuarioDto;
 import com.example.luckypay.mappers.UsuarioMapper;
-import com.example.luckypay.models.Usuario;
+import com.example.luckypay.models.usuarios.Usuario;
 import com.example.luckypay.repositoryes.UsuarioRepository;
 import com.example.luckypay.services.UsuarioService;
 
@@ -23,7 +23,6 @@ public class UsuarioServiceImpl implements UsuarioService {
         Usuario usuario = usuarioMapper.convierteaEntidad(usuarioDto);
 
         // 2. Asegurar que el ID sea nulo para que se genere uno nuevo
-        usuario.setId(null);
 
         // 3. Guardar en la base de datos
         Usuario usuarioGuardado = usuarioRepository.save(usuario);
