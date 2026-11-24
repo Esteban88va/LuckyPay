@@ -29,8 +29,8 @@ public class UsuarioDtoResponse {
     private String numDoc;
 
     // Ubicación
-    private String ciudad;
+    private String barrio;
 
-    private String departamento;
+    private String localidad;
 }
 
