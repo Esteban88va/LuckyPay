@@ -1,3 +1,4 @@
+
 package com.example.luckypay.security;
 
 import org.springframework.context.annotation.Bean;
@@ -16,10 +17,10 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-                // Desactiva CSRF para evitar bloqueos en peticiones POST, PUT, DELETE (ej.
-                // desde Postman o frontend)
+                // Desactiva CSRF para evitar bloqueos en peticiones POST, PUT, DELETE
+                // (ej. desde Postman o frontend)
                 .csrf(AbstractHttpConfigurer::disable)
-                // Permite el acceso libre a absolutamente todas las rutas
+                // Permite el acceso libre a todas las rutas
                 .authorizeHttpRequests(auth -> auth
                         .anyRequest().permitAll());
 
