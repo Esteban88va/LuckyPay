@@ -25,7 +25,7 @@ public class UsuarioDto {
 @JsonProperty("nomb")
 @NotBlank(message = "El nombre es obligatorio")
 @Size(min = 2, max = 60, message = "El nombre debe tener entre 2 y 60 caracteres")
-private String nom;
+private String nomb;
 
 @JsonProperty("apell")
 private String apell;
