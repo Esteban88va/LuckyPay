@@ -21,14 +21,13 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "usuarios_auth_roles")
+@Table(name = "usuarios_auth_roles_enum")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class UsuarioAuthRol {
-
+public class UsuarioAuthRolEnum {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
